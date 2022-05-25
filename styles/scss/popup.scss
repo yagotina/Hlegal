@@ -1,0 +1,132 @@
+@import 'variable';
+@import 'fonts';
+
+// .show-popup-contact {
+//     position: fixed;
+//     right: 30px;
+//     bottom: 30px;
+//     width: 50px;
+//     height: 50px;
+//     background: $basic_color;
+//     border: none;
+//     border-radius: 50%;
+//     font-size: 0;
+// }
+
+.popup-contact,
+.popup-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparentize($main_regular_color, 0.3);
+    display: none;
+}
+
+.popup-contact.show,
+.popup-menu.show {
+    display: flex;
+}
+
+.popup__close-btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: transparent;
+    border-radius: 8px;
+    border: none;
+    font-size: 0;
+    &:hover {
+        background: $grey_separator_color;
+    }
+    &-menu {
+        margin-bottom: 20px;
+        align-self: flex-end;
+    }
+}
+
+.contact-card {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background: $grey_bg_color;
+    padding: 30px;
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__input {
+        width: 100%;
+        height: 56px;
+        border: none;
+        margin-bottom: 15px;
+        background: $basic_color;
+        padding: 15px;
+        border-radius: 8px;
+        &::placeholder {
+            font: $paragraph_regular;
+            color: $grey_text_color;
+        }
+        &-textarea {
+            height: 130px;
+            margin-bottom: 30px;
+        }
+        &-margin {
+            margin-bottom: 30px;
+        }
+    }
+    &__send-btn {
+        width: 100%;
+        height: 56px;
+        background: $active_regular_color;
+        box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+        border-radius: 12px;
+        border: none;
+        font: $h4_regular;
+        color: $basic_color;
+        &:hover {
+            background: $active_hover_color;
+        }
+        &:active {
+            background: $active_active_color;
+        }
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 360px;
+    height: fit-content;
+    padding: 12px;
+    background: $basic_color;
+    border-radius: 12px 12px 0px 0px;
+    position: fixed;
+    bottom: 0;
+    left: calc(50% - 360px / 2);
+    &__list__item {
+        width: 335px;
+        padding: 7px;
+        background: $grey_bg_color;
+        border-radius: 12px;
+        font: 24px/29px 'Montserrat-Bold';
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        &:active {
+            background: $grey_separator_color;
+        }
+        &__link {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: $active_regular_color;
+            &-active {
+                color: $accent_color;
+            }
+        }
+    }
+}

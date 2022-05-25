@@ -495,6 +495,16 @@ body {
   white-space: nowrap;
 }
 
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../../fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../../fonts/Montserrat-Bold.ttf");
+  font-weight: 700;
+}
 .popup-contact,
 .popup-menu {
   position: fixed;

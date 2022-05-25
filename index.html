@@ -43,7 +43,7 @@
                     <img class="header__logo__link-img" src="images/logo.svg" alt="logo"/>
                   </a>
                 </div>
-                <button class="header__menu-btn"></button>
+                <button class="header__menu-btn" id="showMenu"></button>
               </div>
               <nav class="header__menu header__container">
                 <ul class="header__menu__list">
@@ -414,9 +414,9 @@
         </form>
       </div>
     </div>
-    <div class="popup-menu">
+    <div class="popup-menu" id="menu">
       <nav class="menu">
-        <button class="popup__close-btn popup__close-btn-menu">
+        <button class="popup__close-btn popup__close-btn-menu" onclick="closeMenu()">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" >
             <path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2" />
             <path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2" />
@@ -451,5 +451,7 @@
         </ul>
       </nav>
     </div>
+
+    <script src="scripts/popup_menu.js"></script>
   </body>
 </html>
